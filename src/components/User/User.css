@@ -1,0 +1,16 @@
+li{
+    border: 1px solid gray;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  
+}
+img{
+    border-radius: 20px;
+}
+
+.wrapp{
+    display: flex;
+    flex-direction: column;
+}
