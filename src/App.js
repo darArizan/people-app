@@ -1,5 +1,3 @@
-
-
 import React, { Component } from 'react';
 import './App.css';
 import { Blog } from './Page/Blog/Blog';

@@ -8,7 +8,7 @@ class Header extends Component {
             <header>
                 <span>BIT People</span>
                 <span>About</span>
-                <span><i class="fas fa-redo-alt"></i></span>
+                <span>D</span>
                 <span>g</span>
             </header>
 
