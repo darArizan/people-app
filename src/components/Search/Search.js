@@ -11,16 +11,16 @@ class Search extends Component {
     render() {
         return (
             <div>
-                <span>d</span>
+                <span><i class="fas fa-search"></i></span>
 
 
-                <input onChange={this.getValue} type='search'></input>
-                <div>
-                    <span>Male: {this.props.gender.male}</span>
-                    <span>Female:{this.props.gender.female}
+                <input placeholder='Search users' onChange={this.getValue} type='search'></input>
+                <div className='gender'>
+                    <span>Male: {this.props.male}</span>
+                    <span>Female:{this.props.female}
                     </span>
                 </div>
-            </div>
+            </div >
         );
     }
 }

@@ -9,20 +9,25 @@ class Blog extends Component {
         inputValue: '',
         users: [],
         filteredUsers: [],
-        gender: null,
+        male: null,
+        female: null,
+        gridView: false,
 
     }
 
 
     countGender = users => {
         const male = users.filter(user => user.gender === 'male').length
+
         const female = users.filter(user => user.gender === 'female').length
-        console.log(male, female)
+
         this.setState({
-            gender: {
-                male: male,
-                female: female
-            }
+
+            male: male,
+            female: female
+
+
+
         })
     }
 
@@ -52,7 +57,10 @@ class Blog extends Component {
                     filteredUsers: results.results
                 })
                 this.countGender(results.results);
+
+
             })
+
     }
 
     onUserSearch = (data) => {
@@ -61,13 +69,19 @@ class Blog extends Component {
         })
     }
 
+    layoutChange = () => {
+        this.setState({
+            gridView: !this.state.gridView
+        })
+    }
     render() {
         return (
             <div>
-                <Header onReload />
-                <Search onSearch={this.onUserSearch} gender={this.state.gender} />
+                <Header onReload={() => this.getData()}
+                    onLayoutChange={() => this.layoutChange()} />
+                <Search onSearch={this.onUserSearch} male={this.state.male} female={this.state.female} />
                 <UserList filteredUsers={this.state.filteredUsers} />
-            </div>
+            </div >
         );
     }
 }

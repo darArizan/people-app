@@ -6,10 +6,13 @@ class Header extends Component {
         return (
 
             <header>
-                <span>BIT People</span>
-                <span>About</span>
-                <span>D</span>
-                <span>g</span>
+
+                <span className='bit'>BIT People</span>
+                <div className='change'>
+                    <span className='about'>About</span>
+                    <span className='reload' onClick={this.props.onReload}> <i class="fas fa-redo"></i></span>
+                    <span className='grid' onClick={this.props.onLayoutChange} ><i class="fas fa-border-all"></i></span>
+                </div>
             </header>
 
         );

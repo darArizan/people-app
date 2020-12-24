@@ -7,7 +7,7 @@ class UserList extends Component {
     rendUsers = () => {
         return (
             <div>
-                <ul>
+                <ul className={`${this.props.gridView ? 'gridView' : ''}`}>
                     {this.props.filteredUsers.map(data => <User data={data} />)}
                 </ul>
             </div>

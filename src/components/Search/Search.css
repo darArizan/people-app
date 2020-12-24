@@ -2,4 +2,10 @@ input{
     width: 70%;
     border-style: none;
      outline: none;
+     border-bottom:black;
+}
+.gender{
+    position: relative;
+    left: 535px;
+    color:rgb(196, 190, 190);
 }
