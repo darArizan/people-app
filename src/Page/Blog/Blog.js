@@ -1,89 +1,97 @@
-import React, { Component } from 'react';
+
 import { Header } from '../../components/Header/Header'
 import { Search } from "../../components/Search/Search";
 import { UserList } from '../../components/UserList/UserList';
+import React, { useState, useEffect } from 'react'
 
 
-class Blog extends Component {
-    state = {
-        inputValue: '',
-        users: [],
-        filteredUsers: [],
-        male: null,
-        female: null,
-        gridView: false,
+const Blog = () => {
+    // state = {
+    //     inputValue: '',
+    //     users: [],
+    //     filteredUsers: [],
+    //     male: null,
+    //     female: null,
+    //     gridView: false,
 
-    }
+    // }
+    const [inputValue, setInputValue] = useState('')
+    const [users, setUsers] = useState([])
+    const [filteredUsers, setFilteredUsers] = useState([])
+    const [male, setMale] = useState(null)
+    const [female, setFemale] = useState(null)
+    const [gridView, setGridView] = useState(false)
 
 
-    countGender = users => {
+    const countGender = users => {
         const male = users.filter(user => user.gender === 'male').length
 
         const female = users.filter(user => user.gender === 'female').length
 
-        this.setState({
-
-            male: male,
-            female: female
-
+        setMale(male)
+        setFemale(female)
+    }
 
 
+    // componentDidMount = () => {
+    //     this.getData()
+    // }
+    useEffect(() => {
+        getData()
+    }, [])
+
+    // componentWillUpdate = (nextProps, nextState) => {
+    //   {
+    //         const filterUsers = this.state.users.filter(user => (
+    //             user.name.first.includes(nextState.inputValue)
+    //         ))
+
+
+    //             setFilteredUsers(filterUsers)
+
+    //     }
+    // }//funkcinalno
+
+    useEffect(() => {
+        const filterUsers = users.filter(user => {
+            user.name.first.includes(inputValue)
         })
-    }
+        setFilteredUsers(filterUsers)
+    }, [inputValue])
 
-
-    componentDidMount = () => {
-        this.getData()
-    }
-
-    componentWillUpdate = (nextProps, nextState) => {
-        if (nextState.inputValue !== this.state.inputValue) {
-            const filterUsers = this.state.users.filter(user => (
-                user.name.first.includes(nextState.inputValue)
-            ))
-
-            this.setState({
-                filteredUsers: filterUsers
-            })
-        }
-    }
-
-    getData = () => {
+    const getData = () => {
         fetch('https://randomuser.me/api/?results=15')
             .then(data => data.json())
             .then(results => {
-                this.setState({
-                    users: results.results,
-                    filteredUsers: results.results
-                })
-                this.countGender(results.results);
 
-
+                setUsers(results.results)
+                setFilteredUsers(results.results)
+                countGender(results.results);
             })
 
+
+
     }
 
-    onUserSearch = (data) => {
-        this.setState({
-            inputValue: data
-        })
+    const onUserSearch = (data) => {
+
+        setInputValue(data)
     }
 
-    layoutChange = () => {
-        this.setState({
-            gridView: !this.state.gridView
-        })
+    const layoutChange = () => {
+
+        setGridView(!gridView)
     }
-    render() {
-        return (
-            <div>
-                <Header onReload={() => this.getData()}
-                    onLayoutChange={() => this.layoutChange()} />
-                <Search onSearch={this.onUserSearch} male={this.state.male} female={this.state.female} />
-                <UserList filteredUsers={this.state.filteredUsers} />
-            </div >
-        );
-    }
+
+    return (
+        <div>
+            <Header onReload={() => getData()}
+                onLayoutChange={() => layoutChange()} />
+            <Search onSearch={onUserSearch} male={male} female={female} />
+            <UserList filteredUsers={filteredUsers} />
+        </div >
+    );
+
 }
 
 export { Blog };

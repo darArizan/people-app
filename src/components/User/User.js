@@ -1,21 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './User.css'
 
-class User extends Component {
-    render() {
-        return (
-            <li className={`${this.props.data.gender === 'female' ? 'female' : ''}`}>
-                <img src={this.props.data.picture.thumbnail} />
-                <div className='wrap'>
-                    <span>User name: {this.props.data.name.first}</span>
-                    <span>Email: {this.props.data.email}</span>
+const User = (props) => {
+    return (
+        <li className={`${props.data.gender === 'female' ? 'female' : ''}`}>
+            <img src={props.data.picture.thumbnail} />
+            <div className='wrap'>
+                <span>User name: {props.data.name.first}</span>
+                <span>Email: {props.data.email}</span>
 
-                    <span>{this.props.data.dob.date}</span>
-                </div>
+                <span>{props.data.dob.date}</span>
+            </div>
 
-            </li>
-        );
-    }
+        </li>
+    );
 }
 
 export { User };

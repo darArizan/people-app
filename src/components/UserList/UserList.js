@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './UserList.css'
 import { User } from '../User/User'
 
-class UserList extends Component {
+const UserList = (props) => {
 
-    rendUsers = () => {
+    const rendUsers = () => {
         return (
             <div>
-                <ul className={`${this.props.gridView ? 'gridView' : ''}`}>
-                    {this.props.filteredUsers.map(data => <User data={data} />)}
+                <ul className={`${props.gridView ? 'gridView' : ''}`}>
+                    {props.filteredUsers.map(data => <User data={data} />)}
                 </ul>
             </div>
         )
@@ -16,14 +16,14 @@ class UserList extends Component {
     }
 
 
-    render() {
 
-        return (
-            <>
-                { this.rendUsers()}
-            </>
-        );
-    }
+
+    return (
+        <div>
+            {rendUsers()}
+        </div>
+    );
 }
+
 
 export { UserList };

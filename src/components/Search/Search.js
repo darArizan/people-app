@@ -1,28 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Search.css'
 
-class Search extends Component {
+const Search = (props) => {
 
-    getValue = (event) => {
+    const getValue = (event) => {
         let value = event.target.value
-        this.props.onSearch(value)
+        props.onSearch(value)
     }
 
-    render() {
-        return (
-            <div>
-                <span><i class="fas fa-search"></i></span>
+    return (
+        <div>
+            <span><i class="fas fa-search"></i></span>
 
 
-                <input placeholder='Search users' onChange={this.getValue} type='search'></input>
-                <div className='gender'>
-                    <span>Male: {this.props.male}</span>
-                    <span>Female:{this.props.female}
-                    </span>
-                </div>
-            </div >
-        );
-    }
+            <input placeholder='Search users' onChange={() => getValue()} type='search'></input>
+            <div className='gender'>
+                <span>Male: {props.male}</span>
+                <span>Female:{props.female}
+                </span>
+            </div>
+        </div >
+    );
 }
+
 
 export { Search };
