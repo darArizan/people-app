@@ -1,4 +1,5 @@
-header{
+.header{
+    width: 100%;
     background-color: rgb(199, 74, 74);
     color: aliceblue;
     padding: 10px 0;

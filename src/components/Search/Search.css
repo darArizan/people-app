@@ -1,11 +1,19 @@
 input{
-    width: 70%;
+    width: 30%;
     border-style: none;
      outline: none;
      border-bottom:black;
+     font-size: 15px;
+     cursor: pointer;
+     padding-top: 10px;
 }
 .gender{
-    position: relative;
-    left: 535px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     color:rgb(196, 190, 190);
+}
+span{
+    margin-right: 40px;
 }

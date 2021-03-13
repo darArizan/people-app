@@ -1,0 +1,27 @@
+.gridView{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+.gridView>li {
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+}
+.gridView .photo{
+    width: 100px;
+    height: 70px;
+    border-radius: 0px;
+    position: relative;
+    left: 118px;
+
+}
+.gridView .wrap{
+    padding-top: 100px;
+    font-size: 17px;
+    align-items: center;
+    width: 300px;
+}

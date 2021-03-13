@@ -4,7 +4,7 @@ import './User.css'
 const User = (props) => {
     return (
         <li className={`${props.data.gender === 'female' ? 'female' : ''}`}>
-            <img src={props.data.picture.thumbnail} />
+            <img className='photo'src={props.data.picture.thumbnail} />
             <div className='wrap'>
                 <span>User name: {props.data.name.first}</span>
                 <span>Email: {props.data.email}</span>

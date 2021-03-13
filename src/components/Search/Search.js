@@ -2,10 +2,16 @@ import React from 'react';
 import './Search.css'
 
 const Search = (props) => {
+    
 
-    const getValue = (event) => {
-        let value = event.target.value
+    const  getValue= searchRes => {
+        let value = searchRes
+    
+   
+   
         props.onSearch(value)
+      
+       
     }
 
     return (
@@ -13,7 +19,7 @@ const Search = (props) => {
             <span><i class="fas fa-search"></i></span>
 
 
-            <input placeholder='Search users' onChange={() => getValue()} type='search'></input>
+            <input placeholder='Search users' onChange={(e)=>getValue(e.target.value)} type='search' ></input>
             <div className='gender'>
                 <span>Male: {props.male}</span>
                 <span>Female:{props.female}
