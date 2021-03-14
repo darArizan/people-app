@@ -21,8 +21,8 @@ const Search = (props) => {
 
             <input placeholder='Search users' onChange={(e)=>getValue(e.target.value)} type='search' ></input>
             <div className='gender'>
-                <span>Male: {props.male}</span>
-                <span>Female:{props.female}
+                <span className='genderName'>Male: {props.male}</span>
+                <span className='genderName'>Female:{props.female}
                 </span>
             </div>
         </div >

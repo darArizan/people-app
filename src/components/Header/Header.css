@@ -26,6 +26,10 @@
 .change{
     margin-left: 70px;
 }
+.grid:hover{
+    cursor: pointer;
+    background-color: rgb(196, 190, 190);
+}
 .about{
     font-family: system-ui;
 }

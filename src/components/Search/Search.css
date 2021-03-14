@@ -14,6 +14,7 @@ input{
     justify-content: flex-end;
     color:rgb(196, 190, 190);
 }
-span{
-    margin-right: 40px;
+.genderName{
+    margin-right: 140px;
+    font-size: 18px;
 }

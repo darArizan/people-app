@@ -6,10 +6,10 @@ const User = (props) => {
         <li className={`${props.data.gender === 'female' ? 'female' : ''}`}>
             <img className='photo'src={props.data.picture.thumbnail} />
             <div className='wrap'>
-                <span>User name: {props.data.name.first}</span>
-                <span>Email: {props.data.email}</span>
+                <span className='info'>User name: {props.data.name.first}</span>
+                <span className='info'>Email: {props.data.email}</span>
 
-                <span>{props.data.dob.date}</span>
+                <span className='info'>{props.data.dob.date}</span>
             </div>
 
         </li>
