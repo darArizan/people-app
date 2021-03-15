@@ -7,6 +7,7 @@ li{
     height: 80px;
   
 }
+
 .photo{
     border-radius: 50%;
     width: 60px;
@@ -25,4 +26,7 @@ li{
 }
 .female{
     background-color: rgb(243, 213, 218);
+}
+.male{
+    background-color: rgba(49, 113, 209, 0.5);
 }

@@ -9,7 +9,6 @@ const Header = (props) => {
 
             <span className='bit'>BIT People</span>
             <div className='change'>
-                <span className='about'>About</span>
                 <span className='reload' onClick={props.onReload}> <i class="fas fa-redo"></i></span>
                 <span className='grid' onClick={props.onLayoutChange} ><i class="fas fa-border-all"></i></span>
             </div>

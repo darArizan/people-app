@@ -16,7 +16,7 @@ const Search = (props) => {
 
     return (
         <div>
-            <span><i class="fas fa-search"></i></span>
+            <span className='searchGlass'><i class="fas fa-search"></i></span>
 
 
             <input placeholder='Search users' onChange={(e)=>getValue(e.target.value)} type='search' ></input>

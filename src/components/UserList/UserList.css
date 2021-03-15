@@ -8,22 +8,23 @@
 }
 .gridView>li {
     width: 300px;
-    height: 200px;
+    height: 300px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    padding-top: 5px;
+    padding-top: 20px;
 }
 .gridView .photo{
-    width: 100px;
-    height: 80px;
+    width: 80%;
+    height: 230px;
     border-radius: 3px;
+    padding: 0px;
 
 }
 .gridView .wrap{
-    font-size: 19px;
+    font-size: 16px;
     align-items: center;
     padding-top: 10px;
 

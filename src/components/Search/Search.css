@@ -6,6 +6,10 @@ input{
      font-size: 15px;
      cursor: pointer;
      padding-top: 10px;
+     background-color: transparent;
+}
+.searchGlass{
+    color:rgb(196, 190, 190);
 }
 .gender{
     width: 100%;

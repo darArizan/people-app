@@ -1,6 +1,5 @@
 .header{
     width: 100%;
-    background-color: rgb(199, 74, 74);
     color: aliceblue;
     padding: 10px 0;
     font-size: 30px;
@@ -14,22 +13,31 @@
     margin-right: 470px;
     font-family: system-ui;
 }
+
+.change{
+    margin-left: 70px;
+    color:rgb(196, 190, 190);
+}
+
+
 .reload{
     margin-left: 10px;
     font-size: 20px;
+    color:rgb(196, 190, 190);
+}
+.reload:hover{
+    color:rgb(196, 190, 190);
+    cursor: pointer;
 }
 .grid{
     margin-left: 20px;
     font-size: 20px;
 }
-
-.change{
-    margin-left: 70px;
-}
 .grid:hover{
+    color:rgb(196, 190, 190);
     cursor: pointer;
-    background-color: rgb(196, 190, 190);
 }
+
 .about{
     font-family: system-ui;
 }
