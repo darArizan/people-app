@@ -1,11 +1,10 @@
 .header{
     width: 100%;
-    color: aliceblue;
     padding: 10px 0;
     font-size: 30px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content:flex-end;
  
     
 }
@@ -15,8 +14,10 @@
 }
 
 .change{
-    margin-left: 70px;
-    color:rgb(196, 190, 190);
+    width: 20%;
+    display: flex;
+    justify-content: end;
+   
 }
 
 
@@ -26,18 +27,22 @@
     color:rgb(196, 190, 190);
 }
 .reload:hover{
-    color:rgb(196, 190, 190);
+    color:rgb(102, 93, 93);
     cursor: pointer;
 }
 .grid{
     margin-left: 20px;
     font-size: 20px;
+    color:rgb(196, 190, 190);
 }
 .grid:hover{
-    color:rgb(196, 190, 190);
+    color:rgb(102, 93, 93);
     cursor: pointer;
 }
 
 .about{
     font-family: system-ui;
+}
+.bolded{
+    color: black;
 }

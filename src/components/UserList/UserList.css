@@ -1,10 +1,11 @@
+
 .gridView{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     width: 80%;
     margin: 0 auto;
-    padding-top: 40px;
+    padding: 0px;
 }
 .gridView>li {
     width: 300px;
@@ -20,12 +21,13 @@
     width: 80%;
     height: 230px;
     border-radius: 3px;
-    padding: 0px;
+    padding-top: 5px;
 
 }
 .gridView .wrap{
-    font-size: 16px;
+    font-size: 15px;
     align-items: center;
     padding-top: 10px;
+    margin: 0px;
 
 }

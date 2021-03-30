@@ -7,7 +7,7 @@ const UserList = (props) => {
     const rendUsers = () => {
         return (
             <div>
-                <ul className={`${props.gridView ? 'gridView' : ''}`}>
+                <ul className={`${props.gridView ? 'gridView' : '' }`}>
                     {props.filteredUsers.map(data => <User data={data} />)}
                 </ul>
             </div>

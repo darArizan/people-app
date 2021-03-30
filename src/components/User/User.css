@@ -5,6 +5,7 @@ li{
     display: flex;
     flex-direction: row;
     height: 80px;
+    
   
 }
 
@@ -25,8 +26,8 @@ li{
     justify-content: space-evenly;
 }
 .female{
-    background-color: rgb(243, 213, 218);
+    background-color: rgb(202, 227, 199);
 }
 .male{
-    background-color: rgba(49, 113, 209, 0.5);
+    background-color: rgba(32, 117, 79, 0.7);
 }

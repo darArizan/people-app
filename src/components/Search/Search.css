@@ -4,21 +4,22 @@ input{
      outline: none;
      border-bottom:black;
      font-size: 15px;
-     cursor: pointer;
-     padding-top: 10px;
+     cursor: pointer; 
      background-color: transparent;
+
 }
+
 .searchGlass{
     color:rgb(196, 190, 190);
 }
 .gender{
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     color:rgb(196, 190, 190);
 }
 .genderName{
-    margin-right: 140px;
+    margin-right: 20px;
     font-size: 18px;
 }
